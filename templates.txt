@@ -1,0 +1,98 @@
+############ Vocabulary.strokes
+How many strokes there are in character @C0@ @?@
+vocabulary.strokes(character=@C0@)
+
+How many strokes in character @C0@ @?@
+vocabulary.strokes(character=@C0@)
+
+strokes in character @C0@ @?@
+vocabulary.strokes(character=@C0@)
+
+strokes in @C0@ @?@
+vocabulary.strokes(character=@C0@)
+
+@C0@ strokes @?@
+vocabulary.strokes(character=@C0@)
+
+what are strokes in @C0@ @?@
+vocabulary.strokes(character=@C0@)
+
+############ Vocabulary.radical
+What is radical of @C0@ @?@
+vocabulary.radical(character=@C0@)
+
+What is root of @C0@ @?@
+vocabulary.radical(character=@C0@)
+
+radical of @C0@ @?@
+vocabulary.radical(character=@C0@)
+
+root of @C0@ @?@
+vocabulary.radical(character=@C0@)
+
+@C0@ radical @?@
+vocabulary.radical(character=@C0@)
+
+@C0@ root @?@
+vocabulary.radical(character=@C0@)
+
+############ Vocabulary.info(char)
+Describe char @C0@
+vocabulary.info(character=@C0@)
+
+Describe character @C0@
+vocabulary.info(character=@C0@)
+
+Character @C0@ @?@
+vocabulary.info(character=@C0@)
+
+Char @C0@ @?@
+vocabulary.info(character=@C0@)
+
+Character info @C0@ @?@
+vocabulary.info(character=@C0@)
+
+Char info @C0@ @?@
+vocabulary.info(character=@C0@)
+
+tell me about char @C0@
+vocabulary.info(character=@C0@)
+
+############ Vocabulary.classifier
+What is classifier for @W0@ @?@
+vocabulary.classifier(word=@W0@)
+
+What is measure word for @W0@ @?@
+vocabulary.classifier(word=@W0@)
+
+What is classifier of @W0@ @?@
+vocabulary.classifier(word=@W0@)
+
+classifier for @W0@ @?@
+vocabulary.classifier(word=@W0@)
+
+measure word for @W0@ @?@
+vocabulary.classifier(word=@W0@)
+
+############ Vocabulary.meaning
+TODO
+vocabulary.meaning(word=@W0@)
+
+############ Vocabulary.sound
+TODO
+
+############ Vocabulary.info(word)
+Describe word @W0@
+vocabulary.info(word=@W0@)
+
+Word @W0@ @?@
+vocabulary.info(word=@W0@)
+
+Word info @W0@ @?@
+vocabulary.info(word=@W0@)
+
+Tell me about word @W0@
+vocabulary.info(word=@W0@)
+
+What is word @W0@ @?@
+vocabulary.info(word=@W0@)

@@ -1,0 +1,6 @@
+sync.sh
+fq.txt
+corpus/
+save/
+cedict_ts.u8
+*.iml
