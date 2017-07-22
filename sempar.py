@@ -250,7 +250,7 @@ def load_pairs(xpath, ypath):
 
     return zip(data_x, data_y)
 
-def create_lookup_tables(vocab, counts, cutoff_size):
+def create_lookup_tables(vocab, counts, cutoff_size=None, size_limit=None):
     """
     Create lookup tables for vocabulary
     :param vocab: The text of tv scripts split into words
@@ -260,9 +260,12 @@ def create_lookup_tables(vocab, counts, cutoff_size):
     vocab_to_int = {}
     int_to_vocab = {}
 
-    for i, word in enumerate([PAD, UNK, START, STOP] +
-                              sorted(vocab, reverse=True,
-                                     key=lambda x: counts[x])):
+    _sorted = sorted(vocab, reverse=True, key=lambda x: counts[x])
+
+    for i, word in enumerate([PAD, UNK, START, STOP] + _sorted):
+        if size_limit is not None and i > size_limit:
+            break
+
         vocab_to_int[word] = i
         int_to_vocab[i] = word
 
@@ -367,9 +370,9 @@ def train(args, parser, checkpoint, params_file, export_dir):
     xs, ys, vocab_x, vocab_y, counts = preprocess(pairs)
 
     vocab_to_int_x, int_to_vocab_x = create_lookup_tables(
-        vocab_x, counts, args.cutoff_size)
+        vocab_x, counts, args.cutoff_size, args.dict_size)
     vocab_to_int_y, int_to_vocab_y = create_lookup_tables(
-        vocab_y, counts, None)
+        vocab_y, counts, args.cutoff_size)
 
     vocab_size_x = len(vocab_to_int_x)
     vocab_size_y = len(vocab_to_int_y)
@@ -383,14 +386,14 @@ def train(args, parser, checkpoint, params_file, export_dir):
 
     # Build model
     batch_size = args.batch_size
-    cell_size = 700
+    cell_size = args.cell_size
     enc_num_layers = 2
     dec_num_layers = 2
-    embed_size = 800
+    embed_size = args.embed_size
     learning_rate = 0.0003
     enc_keep_probability = 0.8
     dec_keep_probability = enc_keep_probability
-    display_step = 1000
+    display_step = args.display_step
     global_step = 0
 
     test_len = min(int(len(xs_ids) * 0.2), 10000)
@@ -464,7 +467,10 @@ def train(args, parser, checkpoint, params_file, export_dir):
 
     losses = set()
 
-    with tf.Session(graph=train_graph) as ses:
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth=True
+
+    with tf.Session(graph=train_graph, config=config) as ses:
         ses.run(tf.global_variables_initializer())
 
         for epoch_i in range(args.epochs):
@@ -647,10 +653,18 @@ if __name__ == "__main__":
                         help='Text for infering mode')
     parser.add_argument('-f', '--cutoff_size', default=1, type=int,
                         help='Word count cutoff value')
+    parser.add_argument('-d', '--dict_size', default=100000, type=int,
+                        help='Maximum dict size')
     parser.add_argument('-e', '--epochs', default=2, type=int,
                         help='Number epochs')
     parser.add_argument('-b', '--batch_size', default=64, type=int,
                         help='Batch size')
+    parser.add_argument('-l', '--cell_size', default=500, type=int,
+                        help='Cell size')
+    parser.add_argument('-m', '--embed_size', default=600, type=int,
+                        help='Embedding size')
+    parser.add_argument('-p', '--display_step', default=1000, type=int,
+                        help='Display step')
 
     args = parser.parse_args()
 

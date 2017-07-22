@@ -4,7 +4,7 @@ set -e
 
 SAMPLES=${1:-30000}
 FQS=${2:-10000}
-CLASSES=${3:-3}
+CLASSES=${3:-6}
 CORPUS_DIR=${CORPUS_DIR:-./corpus}
 echo "Writing to ${CORPUS_DIR}. To change this, set the CORPUS_DIR environment variable."
 
@@ -14,7 +14,7 @@ DST=${CORPUS_DIR}/sources.txt
 mkdir -p ${CORPUS_DIR}
 
 # Generate data
-./generate.py ${SAMPLES} ${FQS} ${CLASSES} ./fq.txt ${CORPUS_DIR}
+./generate.py ${SAMPLES} ${FQS} ${CLASSES} ./fq.txt ./cedict_ts.u8 ${CORPUS_DIR}
 
 # Shuffle
 mkfifo rnd1 rnd2

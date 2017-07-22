@@ -4,3 +4,4 @@ corpus/
 save/
 cedict_ts.u8
 *.iml
+.py3

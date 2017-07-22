@@ -1,98 +1,126 @@
 ############ Vocabulary.strokes
 How many strokes there are in character @C0@ @?@
-vocabulary.strokes(character=@C0@)
+vocabulary.strokes(@C0@)
 
 How many strokes in character @C0@ @?@
-vocabulary.strokes(character=@C0@)
+vocabulary.strokes(@C0@)
 
 strokes in character @C0@ @?@
-vocabulary.strokes(character=@C0@)
+vocabulary.strokes(@C0@)
 
 strokes in @C0@ @?@
-vocabulary.strokes(character=@C0@)
+vocabulary.strokes(@C0@)
 
 @C0@ strokes @?@
-vocabulary.strokes(character=@C0@)
+vocabulary.strokes(@C0@)
 
 what are strokes in @C0@ @?@
-vocabulary.strokes(character=@C0@)
+vocabulary.strokes(@C0@)
 
 ############ Vocabulary.radical
 What is radical of @C0@ @?@
-vocabulary.radical(character=@C0@)
+vocabulary.radical(@C0@)
 
 What is root of @C0@ @?@
-vocabulary.radical(character=@C0@)
+vocabulary.radical(@C0@)
 
 radical of @C0@ @?@
-vocabulary.radical(character=@C0@)
+vocabulary.radical(@C0@)
 
 root of @C0@ @?@
-vocabulary.radical(character=@C0@)
+vocabulary.radical(@C0@)
 
 @C0@ radical @?@
-vocabulary.radical(character=@C0@)
+vocabulary.radical(@C0@)
 
 @C0@ root @?@
-vocabulary.radical(character=@C0@)
+vocabulary.radical(@C0@)
 
 ############ Vocabulary.info(char)
 Describe char @C0@
-vocabulary.info(character=@C0@)
+vocabulary.info(@C0@)
 
 Describe character @C0@
-vocabulary.info(character=@C0@)
+vocabulary.info(@C0@)
 
 Character @C0@ @?@
-vocabulary.info(character=@C0@)
+vocabulary.info(@C0@)
 
 Char @C0@ @?@
-vocabulary.info(character=@C0@)
+vocabulary.info(@C0@)
 
 Character info @C0@ @?@
-vocabulary.info(character=@C0@)
+vocabulary.info(@C0@)
 
 Char info @C0@ @?@
-vocabulary.info(character=@C0@)
+vocabulary.info(@C0@)
 
 tell me about char @C0@
-vocabulary.info(character=@C0@)
+vocabulary.info(@C0@)
 
 ############ Vocabulary.classifier
 What is classifier for @W0@ @?@
-vocabulary.classifier(word=@W0@)
+vocabulary.classifier(@W0@)
 
 What is measure word for @W0@ @?@
-vocabulary.classifier(word=@W0@)
+vocabulary.classifier(@W0@)
 
 What is classifier of @W0@ @?@
-vocabulary.classifier(word=@W0@)
+vocabulary.classifier(@W0@)
 
 classifier for @W0@ @?@
-vocabulary.classifier(word=@W0@)
+vocabulary.classifier(@W0@)
 
 measure word for @W0@ @?@
-vocabulary.classifier(word=@W0@)
+vocabulary.classifier(@W0@)
 
 ############ Vocabulary.meaning
-TODO
-vocabulary.meaning(word=@W0@)
+Word meaning @W0@ @?@
+vocabulary.meaning(@W0@)
+
+Meaning of @W0@ @?@
+vocabulary.meaning(@W0@)
+
+Word is the word meaning @W0@ @?@
+vocabulary.meaning(@W0@)
+
+What does the word @W0@ mean @?@
+vocabulary.meaning(@W0@)
 
 ############ Vocabulary.sound
-TODO
+How does the @W0@ sound @?@
+vocabulary.sound(@W0@)
+
+How is @W0@ pronounced @?@
+vocabulary.sound(@W0@)
+
+Sound of @W0@ @?@
+vocabulary.sound(@W0@)
+
+How to pronounce @W0@ @?@
+vocabulary.sound(@W0@)
+
+Pronounce @W0@ @?@
+vocabulary.sound(@W0@)
+
+Pronunciation of @W0@ @?@
+vocabulary.sound(@W0@)
+
+@W0@ pronouncing @?@
+vocabulary.sound(@W0@)
 
 ############ Vocabulary.info(word)
 Describe word @W0@
-vocabulary.info(word=@W0@)
+vocabulary.info(@W0@)
 
 Word @W0@ @?@
-vocabulary.info(word=@W0@)
+vocabulary.info(@W0@)
 
 Word info @W0@ @?@
-vocabulary.info(word=@W0@)
+vocabulary.info(@W0@)
 
 Tell me about word @W0@
-vocabulary.info(word=@W0@)
+vocabulary.info(@W0@)
 
 What is word @W0@ @?@
-vocabulary.info(word=@W0@)
+vocabulary.info(@W0@)
